@@ -10,7 +10,7 @@ spec:
     tty: true
     volumeMounts:
     - name: workdir
-      mountPaths: /root/test
+      mountPath: /root/test
   initContainers:
   - name: busybox
     image: busybox
@@ -25,7 +25,6 @@ spec:
   volumes:
   - name: workdir
     emptyDir: {}
-
 """
 ) {
     node(POD_LABEL) {
